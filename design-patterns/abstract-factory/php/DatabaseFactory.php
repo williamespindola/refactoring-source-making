@@ -49,7 +49,7 @@ class DBAbstractionFactoryMDB2 extends DBAbstractionFactory
     }
 }
 
-class DBAbstractionAbstractFactory
+final class DBAbstractionAbstractFactory
 {
     public static function getFactory(array $settings): DBAbstractionFactory
     {
@@ -77,7 +77,6 @@ class DBAbstractionAbstractFactory
 /**
  * Client's code
  */
-
 $settings = [
     'db.library' => 'pdo',
     'db.dsn' => 'mysql:host=localhost;dbname=test'
